@@ -7,9 +7,10 @@ Análisis exploratorio del ingreso per cápita utilizando datos de la ENEMDU (ma
 - Recorte de valores atípicos (percentiles 1–99)
 - Análisis descriptivo y distribución de frecuencias
 
-## Resumen estadístico
+## Ingresos
 ![Infografía ingreso per cápita](imagenes/ingpc_per_capita.png)
 
+## Resumen
 ![Resumen estadístico](imagenes/resumen_data_atipico.png)
 
 ## Distribución de frecuencias
