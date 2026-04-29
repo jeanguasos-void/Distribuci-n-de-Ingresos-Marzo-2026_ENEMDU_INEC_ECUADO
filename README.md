@@ -25,8 +25,11 @@ Análisis exploratorio del ingreso per cápita utilizando datos de la ENEMDU (ma
 ## Principales hallazgos
 
 • La distribución del ingreso es asimétrica a la derecha, con fuerte concentración en niveles bajos.
+
 • Una parte importante de la población se encuentra en rangos cercanos a la línea de pobreza.
+
 • Más del 60% de la población se ubica por debajo de ~$317.
+
 • La mediana es menor que la media, evidenciando la influencia de ingresos altos sobre el promedio.
 
 ## 🛠️ Herramientas utilizadas
