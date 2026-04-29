@@ -1,0 +1,93 @@
+##  INGRESOS PER CAPITA
+#instalar paquetes
+install.packages("haven")
+
+#abrir librerias
+library(haven) ##spss
+
+#carga de base datos
+#nombre <- read_sav ("archivo spss")
+
+
+enemdu_persona_2026_03 <- read_sav("enemdu_persona_2026_03.sav")
+
+#crear varible
+
+data_jean_spss = enemdu_persona_2026_03 #spss
+
+
+#mostrar nombre de variable
+
+names(data_jean_spss) #spss
+
+
+##limpieza de data
+data_jean_spss = enemdu_persona_2026_03 #spss
+names(data_jean_spss)
+
+str(data_jean_spss) #ver estructura de las variables
+str(data_jean_spss$ingpc)
+summary(data_jean_spss$ingpc) #resumen
+
+## lo minimo que puede ganar una persona es 1$ dolar mensual y lo maximo que pueden ganar son 4.200$##
+## el 25% de las personas ganan 122.8$ y el 75% gana 372$
+#median = es la parte media de los datos "1 - 10" la mediana seria 5 ya que esta en la mitad
+#mean = es el promedio de los datos "1 - 10" la media seria el promedio
+
+summary(data_jean_spss$p10a)
+
+###################limpieza de datos
+data_jean_spss = enemdu_persona_2026_03 #spss
+summary(data_jean_spss$ingpc) #resumen
+
+data_limpia = data_jean_spss[!is.na(data_jean_spss$ingpc),] #limpiar NA´S "datos vacios o sin datos"
+summary(data_limpia$ingpc)
+
+percentil_1 = quantile(data_limpia$ingpc, 0.01, na.rm = TRUE) #na.rm = true, utilizar en argumento estadistico
+percentil_1 #para hacer percentiles = quantile
+
+percentil_99 = quantile(data_limpia$ingpc, 0.99, na.rm = TRUE)
+percentil_99
+
+# menos del 1% de la sociedad gana menos de 22.85$
+# hay un 1% del 99% que gana mas de 1492$
+
+data_sin_atipicos = data_limpia[data_limpia$ingpc > percentil_1 & data_limpia$ingpc < percentil_99,]
+summary(data_sin_atipicos$ingpc) #recorte de percentile para evitar sesgos u outliers para anilisis mas robusto
+
+#################clase 5 tablla de frecuencia
+#nuevas variables
+ingpc_normal = data_jean_spss$ingpc
+ingpc_sin_atp = data_sin_atipicos$ingpc
+
+#sin atipico
+#tabla de frecuencia
+tab_frec = table (cut(ingpc_sin_atp, breaks = 10)) #cut tomas los intervalos de forma automatica para ajuste
+tab_frec
+
+#crear dataframe para una nueva variable
+df_tab_frec = as.data.frame(tab_frec)
+df_tab_frec
+
+hist(tab_frec, breaks = 10)
+
+#Para hacer un grafico con los valores arriba
+
+#*tro grafico main=titulo, xlab=eje x, ylab=eje y, col=color, las=cambia posicion texto
+#*cex.names=para reducir tamaño
+#eje x graf1
+graf1 = barplot(tab_frec, main = "INGRESO PERCAPITA - Marzo 2026",
+                xlab = "Intervalos",
+                ylab = "Frecuencia",
+                col = "skyblue",
+                las = 2,
+                cex.names = 0.5)
+
+#crear tabka de frecuencias
+#eje y
+frecuencias = as.numeric(tab_frec)
+
+text(x = graf1, y = frecuencias/2, labels = frecuencias)
+
+#linea de pobreza 92,40$
+#linea de pobreza extrema 52,07
