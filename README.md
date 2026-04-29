@@ -9,12 +9,15 @@ Análisis exploratorio del ingreso per cápita utilizando datos de la ENEMDU (ma
 
 ## Resumen estadístico
 
-- Mediana: $212.86  
-- Media: $285.18  
-- Q1: $124.40  
-- Q3: $366.67  
-- Rango: $23.25 – $1490.00  
+![Resumen estadístico](imagenes/resumen_data_atipico.png)
 
+## Distribución de frecuencias
+
+![Distribución de frecuencias](imagenes/frecuencia_data_atipico.png)
+
+## Infografía general
+
+![Infografía ingreso per cápita](imagenes/ingpc_per_capita.png)
 ## Contexto económico
 
 - Línea de pobreza: **$92.40**  
