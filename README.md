@@ -8,16 +8,14 @@ Análisis exploratorio del ingreso per cápita utilizando datos de la ENEMDU (ma
 - Análisis descriptivo y distribución de frecuencias
 
 ## Resumen estadístico
+![Infografía ingreso per cápita](imagenes/ingpc_per_capita.png)
 
-![Resumen estadístico](imagenes/resumen_data_atipico.png)
+![Resumen estadístico](imagenes/resumen, data_atipico.png)
 
 ## Distribución de frecuencias
 
-![Distribución de frecuencias](imagenes/frecuencia_data_atipico.png)
+![Distribución de frecuencias](imagenes/frecuencia data_atipico.png)
 
-## Infografía general
-
-![Infografía ingreso per cápita](imagenes/ingpc_per_capita.png)
 ## Contexto económico
 
 - Línea de pobreza: **$92.40**  
