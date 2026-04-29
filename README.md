@@ -10,27 +10,23 @@ Análisis exploratorio del ingreso per cápita utilizando datos de la ENEMDU (ma
 ## Resumen estadístico
 ![Infografía ingreso per cápita](imagenes/ingpc_per_capita.png)
 
-![Resumen estadístico](imagenes/resumen, data_atipico.png)
+![Resumen estadístico](imagenes/resumen_data_atipico.png)
 
 ## Distribución de frecuencias
 
-![Distribución de frecuencias](imagenes/frecuencia data_atipico.png)
+![Distribución de frecuencias](imagenes/frecuencia_data_atipico.png)
 
 ## Contexto económico
 
 - Línea de pobreza: **$92.40**  
 - Línea de pobreza extrema: **$52.07**
 
-## Visualización
-
-![Ingreso per cápita](images/ingreso_percapita_marzo_2026.png)
-
 ## Principales hallazgos
 
-- Distribución asimétrica a la derecha  
-- Alta concentración en ingresos bajos  
-- Aproximadamente el 68% de la población se ubica por debajo de $317  
-- La mediana es menor que la media  
+• La distribución del ingreso es asimétrica a la derecha, con fuerte concentración en niveles bajos.
+• Una parte importante de la población se encuentra en rangos cercanos a la línea de pobreza.
+• Más del 60% de la población se ubica por debajo de ~$317.
+• La mediana es menor que la media, evidenciando la influencia de ingresos altos sobre el promedio.
 
 ## 🛠️ Herramientas utilizadas
 - R
