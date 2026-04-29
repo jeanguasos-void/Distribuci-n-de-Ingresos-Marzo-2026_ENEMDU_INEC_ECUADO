@@ -32,7 +32,7 @@ Análisis exploratorio del ingreso per cápita utilizando datos de la ENEMDU (ma
 
 • La mediana es menor que la media, evidenciando la influencia de ingresos altos sobre el promedio.
 
-## 🛠️ Herramientas utilizadas
+## Herramientas utilizadas
 - R
 - Análisis exploratorio de datos
 
